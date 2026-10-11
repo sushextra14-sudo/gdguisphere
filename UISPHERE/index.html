@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tekno Krraft 2026 | GDG ITER Chapter &mdash; A 3-Day Celebration of Code, Cloud, AI &amp; Innovation</title>
+
+  <!-- SEO & Social Meta -->
+  <meta name="description"
+    content="Tekno Krraft 2026 is a 3-Day Celebration of Code, Cloud, AI &amp; Innovation organized by Google Developer Group (GDG) @ SOA, ITER Chapter at Siksha 'O' Anusandhan (Deemed to be University), Bhubaneswar." />
+  <meta name="keywords"
+    content="Tekno Krraft 2026, GDG ITER, GDG SOA, Siksha O Anusandhan, Bhubaneswar, Gemini 1.5 Pro, Google Cloud, Hackathon, DevFest" />
+  <meta name="theme-color" content="#0A0F1D" />
+  <meta property="og:title" content="Tekno Krraft 2026 | GDG ITER Chapter" />
+  <meta property="og:description"
+    content="A 3-Day Celebration of Code, Cloud, AI &amp; Innovation. Organized by GDG @ SOA, ITER Chapter." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Syne (Avant-Garde Display), Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Interactive Cyber Dual-Ring Cursor with Magnetic Snap -->
+  <div id="cyberCursorDot" class="cyber-cursor-dot" aria-hidden="true"></div>
+  <div id="cyberCursorRing" class="cyber-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Celebratory Confetti Canvas Layer -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Fullscreen Digital Matrix Rain Overlay -->
+  <div id="matrixOverlay" class="matrix-overlay" aria-hidden="true">
+    <canvas id="matrixCanvas"></canvas>
+    <button id="matrixExitBtn" class="matrix-exit-btn">✕ Exit Matrix [ESC]</button>
+  </div>
+
+  <!-- Floating Command Palette HUD Trigger Button -->
+  <button id="cmdKTriggerBtn" class="cmd-k-trigger-btn" aria-label="Open Command Terminal">
+    <span style="color: var(--primary-mint);">⌘</span>
+    <span>Terminal</span>
+    <kbd class="cmd-k-trigger-kbd">Ctrl+K</kbd>
+  </button>
+
+  <!-- Ambient Glowing Mesh Background -->
+  <div class="mesh-glows" aria-hidden="true"></div>
+  <div class="bg-matrix" aria-hidden="true"></div>
+
+  <!-- Top Live Ticker Ribbon -->
+  <aside class="top-ticker" aria-label="Live fest announcement ticker">
+    <div class="container ticker-inner">
+      <div class="ticker-left">
+        <span class="ticker-badge-live">
+          <span class="ping-beacon">
+            <span class="ping-wave"></span>
+            <span class="ping-core"></span>
+          </span>
+          LIVE FEST UPDATE
+        </span>
+        <div class="ticker-marquee">
+          <span id="liveCountText" class="text-primary font-mono">1,500+ Attendees Expected</span>
+          <span>•</span>
+          <span class="text-secondary">30+ Technical Sessions across 4 AI &amp; Cloud Tracks</span>
+          <span>•</span>
+          <span class="text-secondary">₹2,50,000+ Prize Pool &amp; 24h Hack Sprint</span>
+          <span>•</span>
+          <span class="text-secondary">ITER Campus, Siksha 'O' Anusandhan, Bhubaneswar (Oct 16 - 18, 2026)</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <button id="sfxToggleBtn" class="sfx-toggle-btn" title="Toggle cyber sound effects">
+          <span>🔇</span> SFX: OFF
+        </button>
+        <span class="kicker-badge cyan" style="font-size: 0.62rem; padding: 0.15rem 0.5rem;">[FREE_REGISTRATION]</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-bar" aria-label="Main Navigation">
+        <!-- Brand Identity: Primary Official Logo -->
+        <a href="#hero" class="brand-wrapper" aria-label="Tekno Krraft 2026 - GDG @ SOA, ITER Chapter">
+          <img src="assets/tekno-krraft-primary.png" alt="Tekno Krraft 2026 - GDG @ SOA, ITER Chapter"
+            class="primary-brand-logo" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about">$ 01.about</a></li>
+          <li><a href="#schedule">$ 02.schedule</a></li>
+          <li><a href="#tracks">$ 03.tracks</a></li>
+          <li><a href="#speakers">$ 04.speakers</a></li>
+          <li><a href="#sponsors">$ 05.partners</a></li>
+          <li><a href="#faq">$ 06.faq</a></li>
+        </ul>
+
+        <!-- Navigation Actions -->
+        <div class="nav-actions">
+          <a href="#passStudio" class="btn btn-secondary btn-sm btn-mono btn-desktop-only">
+            VIP Badge ✨
+          </a>
+          <button class="btn btn-primary btn-sm" data-open-modal="registration">
+            <span>Pass</span>
+            <span>⚡</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Stage -->
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Dynamic with Interactive Particles & 3D Tilt Hologram)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Interactive Cyber Canvas Layer -->
+      <canvas id="heroCanvas"></canvas>
+
+      <!-- Oversized Ghost Typographic Watermarks in 3D Parallax Layer -->
+      <div class="ghost-text" style="top: -2rem; right: -2rem; font-size: clamp(6rem, 14vw, 13rem); opacity: 0.6;">
+        2026
+      </div>
+      <div class="ghost-text"
+        style="bottom: 1rem; left: -2rem; font-size: clamp(4rem, 10vw, 9rem); opacity: 0.5; font-family: var(--font-mono);">
+        &lt;GDG/&gt;
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Hero Left Column: Telemetry & Pitch -->
+        <div class="hero-content">
+          <!-- Terminal Command Argument Pill -->
+          <div class="hero-terminal-pill">
+            <span style="color: var(--primary-mint); font-weight: 700;">$</span>
+            <span style="color: #CBD5E1;">tekno</span>
+            <span style="color: var(--primary-mint);">--status=live</span>
+            <span style="color: var(--text-muted);">•</span>
+            <span style="color: var(--secondary-cyan); font-weight: 600;">[OCTOBER 16 - 18, 2026 // BBSR]</span>
+          </div>
+
+          <!-- Primary Brand Official Badge -->
+          <div class="hero-primary-brand-badge" title="Tekno Krraft 2026 - GDG @ SOA, ITER Chapter">
+            <img src="assets/tekno-krraft-primary.png" alt="Tekno Krraft 2026 - GDG @ SOA, ITER Chapter"
+              class="hero-primary-logo-img" />
+            <span class="hero-official-badge">[OFFICIAL_FLAGSHIP]</span>
+          </div>
+
+          <!-- Main Hero Display Headline -->
+          <h1 class="hero-title">
+            Tekno Krraft <br />
+            <span class="gradient-text-emerald-cyan">2026</span>
+          </h1>
+
+          <!-- Dynamic Typing Command Line -->
+          <div class="hero-telemetry-box" aria-live="polite">
+            <span class="terminal-prompt">&gt;</span>
+            <span id="terminalTypewriter" class="typing-text">tekno --status=live --track=gen-ai [OCT.16-18]</span>
+            <span class="terminal-cursor"></span>
+          </div>
+
+          <!-- Hero Subtitle Description -->
+          <p class="hero-subtitle">
+            A 3-Day Celebration of Code, Cloud, AI &amp; Innovation | Organized by <span
+              style="color: #60A5FA; font-weight: 700;">GDG ITER Chapter</span>. Empowering 1,500+ student developers
+            and builders across 30+ technical sessions, hands-on bootcamps, and a 24-Hour AI/ML Hack Sprint at Siksha
+            'O' Anusandhan, Bhubaneswar.
+          </p>
+
+          <!-- Live Event Countdown Modular Clock -->
+          <div class="countdown-container" data-purpose="live-countdown">
+            <div class="countdown-header">
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span
+                  style="width: 7px; height: 7px; border-radius: 50%; background: var(--secondary-cyan); display: inline-block;"></span>
+                <span>EVENT LAUNCH COUNTDOWN // OCT 16, 2026</span>
+              </div>
+              <span style="color: var(--primary-mint); font-weight: 700;">● 09:00 AM IST</span>
+            </div>
+            <div class="countdown-digits-grid">
+              <div class="countdown-card days">
+                <span class="number" id="countDays">04</span>
+                <span class="label">DAYS</span>
+              </div>
+              <div class="countdown-card hours">
+                <span class="number" id="countHours">13</span>
+                <span class="label">HRS</span>
+              </div>
+              <div class="countdown-card mins">
+                <span class="number" id="countMins">55</span>
+                <span class="label">MINS</span>
+              </div>
+              <div class="countdown-card secs">
+                <span class="number" id="countSecs">35</span>
+                <span class="label">SECS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Cyber FX & 3D Particle / Sound Control Dock -->
+          <div class="fx-dock-container" data-purpose="fx-controller">
+            <div class="fx-dock-group">
+              <span class="fx-dock-label">3D Engine:</span>
+              <button class="fx-pill-btn active" data-particle-mode="neural">🌌 Neural</button>
+              <button class="fx-pill-btn" data-particle-mode="grid">⚡ Horizon Grid</button>
+              <button class="fx-pill-btn" data-particle-mode="quantum">✨ Quantum</button>
+            </div>
+            <div class="fx-dock-group">
+              <span class="fx-dock-label">Audio Synth:</span>
+              <button class="fx-pill-btn active cyan" data-sound-profile="cyberpunk">Cyber</button>
+              <button class="fx-pill-btn cyan" data-sound-profile="quantum">Deep Space</button>
+              <button class="fx-pill-btn cyan" data-sound-profile="matrix">Matrix</button>
+            </div>
+          </div>
+          <div class="hero-click-hint">
+            <span>⚡</span>
+            <span>Click anywhere on hero stage to deploy 3D particle sonic shockwaves</span>
+          </div>
+
+          <!-- Action CTA Buttons -->
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-open-modal="registration">
+              <span>Register for Events</span>
+              <span>⚡</span>
+            </button>
+            <a href="#schedule" class="btn btn-secondary">
+              <span>Explore Schedule</span>
+              <span style="color: var(--secondary-cyan); font-family: var(--font-mono);">→</span>
+            </a>
+            <a href="#passStudio" class="btn btn-secondary btn-mono">
+              <span>Customize VIP Pass ✨</span>
+            </a>
+          </div>
+
+          <!-- Fast Coordinate Metadata Pills -->
+          <div class="hero-meta-pills">
+            <div class="meta-pill">
+              <span style="color: var(--accent-rose);">📍</span>
+              <span>ITER Campus, Siksha 'O' Anusandhan, Bhubaneswar</span>
+            </div>
+            <div class="meta-pill">
+              <span style="color: var(--accent-amber);">🏆</span>
+              <span>₹2,50,000+ Prize Pool</span>
+            </div>
+            <div class="meta-pill">
+              <span style="color: var(--primary-mint);">☁️</span>
+              <span>Google Cloud &amp; Vertex AI Credits</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: 3D Holographic Attendee Pass Studio -->
+        <div class="pass-studio-wrapper" id="passStudio">
+          <div class="pass-card-3d" id="passCard3D" title="Hover and move your mouse to tilt in 3D">
+            <!-- Realistic Lanyard Punch Slot Cutout -->
+            <div class="lanyard-punch-slot">
+              <div class="lanyard-hole"></div>
+            </div>
+
+            <!-- Animated Prismatic Holographic Border -->
+            <div class="holo-border-wrapper">
+              <div class="holo-sheen-surface">
+                <!-- Cursor-following Specular Glare -->
+                <div class="holo-glare"></div>
+
+                <!-- Pass Top Bar with Official Primary Branding -->
+                <div class="pass-top-bar" style="align-items: center;">
+                  <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <img src="assets/tekno-krraft-primary.png" alt="Tekno Krraft 2026 - GDG ITER"
+                      style="height: 28px; width: auto; max-width: 190px; object-fit: contain;" />
+                  </div>
+                  <span class="pass-badge-id" id="passBadgeId">#TK26-0842</span>
+                </div>
+
+                <!-- Pass Body -->
+                <div class="pass-body">
+                  <div class="pass-info">
+                    <!-- Role Pill & Realistic Gold Contact Smart Chip -->
+                    <div
+                      style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                      <span class="pass-role-badge" id="passRoleTag">VIP ALL-ACCESS [NFC_ENABLED]</span>
+                      <div class="smart-chip-gold" title="Embedded Contactless NFC Microchip">
+                        <div class="chip-line-h"></div>
+                        <div class="chip-line-v"></div>
+                        <div class="chip-core"></div>
+                      </div>
+                    </div>
+
+                    <h2 class="pass-attendee-name" id="passAttendeeName">Alex Chen</h2>
+                    <p class="pass-track-title" id="passTrackTitle">AI &amp; Cloud Pioneer</p>
+                    <p style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                      3-Day Technical Summit Pass • Oct 16-18, 2026
+                    </p>
+                    <div class="pass-perks-list">
+                      <span style="color: var(--accent-amber);">★ Track Workshops</span>
+                      <span>•</span>
+                      <span style="color: var(--secondary-cyan);">24h Hack Pass</span>
+                    </div>
+                  </div>
+
+                  <!-- Stylized Cyber QR Code Matrix with Moving Laser Scanner -->
+                  <div class="pass-qr-box" id="passQrBox">
+                    <div class="qr-laser-scanner"></div>
+                    <!-- Stylized SVG Matrix Pattern -->
+                    <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+                      <rect x="5" y="5" width="28" height="28" fill="#090D16" rx="4" />
+                      <rect x="11" y="11" width="16" height="16" fill="#FFFFFF" rx="2" />
+                      <rect x="15" y="15" width="8" height="8" fill="#090D16" rx="1" />
+                      <rect x="67" y="5" width="28" height="28" fill="#090D16" rx="4" />
+                      <rect x="73" y="11" width="16" height="16" fill="#FFFFFF" rx="2" />
+                      <rect x="77" y="15" width="8" height="8" fill="#090D16" rx="1" />
+                      <rect x="5" y="67" width="28" height="28" fill="#090D16" rx="4" />
+                      <rect x="11" y="73" width="16" height="16" fill="#FFFFFF" rx="2" />
+                      <rect x="15" y="77" width="8" height="8" fill="#090D16" rx="1" />
+                      <rect x="42" y="8" width="6" height="6" fill="#090D16" />
+                      <rect x="50" y="8" width="6" height="6" fill="#06B6D4" />
+                      <rect x="42" y="20" width="14" height="6" fill="#090D16" />
+                      <rect x="8" y="42" width="10" height="6" fill="#090D16" />
+                      <rect x="25" y="42" width="8" height="6" fill="#06B6D4" />
+                      <rect x="42" y="42" width="16" height="16" fill="#10B981" rx="2" />
+                      <rect x="67" y="42" width="10" height="6" fill="#090D16" />
+                      <rect x="82" y="42" width="10" height="6" fill="#090D16" />
+                      <rect x="42" y="67" width="6" height="12" fill="#090D16" />
+                      <rect x="52" y="67" width="8" height="6" fill="#06B6D4" />
+                      <rect x="67" y="67" width="8" height="8" fill="#090D16" />
+                      <rect x="80" y="75" width="12" height="12" fill="#090D16" />
+                    </svg>
+                    <span
+                      style="font-family: var(--font-mono); font-size: 0.55rem; color: #475569; text-align: center; font-weight: 700;">SCAN
+                      GATE</span>
+                  </div>
+                </div>
+
+                <!-- Pass Footer Coordinates -->
+                <div class="pass-footer-coords">
+                  <div style="display: flex; align-items: center; gap: 0.4rem; color: var(--primary-mint);">
+                    <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--primary-mint);"></span>
+                    <span>Delegation Verified</span>
+                  </div>
+                  <span style="color: var(--secondary-cyan); font-weight: 600;">Bhubaneswar, IN</span>
+                </div>
+
+                <!-- Authentic Barcode Security Strip -->
+                <div class="badge-barcode-wrap">
+                  <div class="barcode-lines">
+                    <div class="b-bar w-2"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-3"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar w-2"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-2"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-3"></div>
+                    <div class="b-bar w-2"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar w-3"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-2"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar space"></div>
+                    <div class="b-bar w-1"></div>
+                    <div class="b-bar w-2"></div>
+                  </div>
+                  <span class="barcode-num">TK26 0842 2026 ITER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time Interactive Badge Customizer Toolbar -->
+          <div class="pass-customizer-toolbar">
+            <div
+              style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.5rem; display: flex; justify-content: space-between;">
+              <span>// PERSONALIZE YOUR PASS IN REAL-TIME</span>
+              <span style="color: var(--primary-mint);">3D TILT ACTIVE</span>
+            </div>
+            <div class="customizer-row">
+              <input type="text" id="customAttendeeName" class="customizer-input"
+                placeholder="Type your name or @handle..." maxlength="24" value="Alex Chen" />
+              <button class="btn btn-primary btn-sm btn-mono"
+                onclick="exportCalendarEvent('Tekno Krraft 2026 All-Access Pass', 'Oct 16-18, 2026', 'ITER SOA Campus')">
+                Export
+              </button>
+            </div>
+            <div class="role-chips-picker">
+              <button class="role-chip active" data-role="VIP ALL-ACCESS" data-track="AI &amp; Cloud Pioneer">
+                AI Pioneer
+              </button>
+              <button class="role-chip" data-role="HACK SPRINT LEAD" data-track="24H Hackathon Builder">
+                Hack Sprint Lead
+              </button>
+              <button class="role-chip" data-role="CLOUD ARCHITECT" data-track="Cloud Run &amp; DevOps">
+                Cloud Architect
+              </button>
+              <button class="role-chip" data-role="HARDWARE HACKER" data-track="Edge TPU &amp; IoT Labs">
+                Hardware Hacker
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OFFICIAL GDG CHAPTER COMMUNITY BANNER
+         Featuring Official Google Developer Groups Emblem Provided by Client
+         ========================================================================== -->
+    <section class="gdg-chapter-banner-section" aria-label="Google Developer Groups Chapter Banner">
+      <div class="container">
+        <div class="gdg-banner-card">
+          <div class="gdg-banner-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Official GDG Emblem Logo Provided by Client -->
+          <div class="gdg-banner-logo-wrapper" title="Google Developer Groups - Official Chapter">
+            <img src="assets/gdg-logo-stacked.png" alt="Google Developer Groups Official Chapter Logo"
+              class="gdg-banner-img" />
+          </div>
+
+          <!-- Banner Editorial Content -->
+          <div class="gdg-banner-content">
+            <div class="gdg-banner-kicker">
+              <span style="color: #4285F4;">●</span>
+              <span>OFFICIAL STUDENT DEVELOPER COMMUNITY // ITER CHAPTER</span>
+            </div>
+            <h2 class="gdg-banner-title">
+              Google Developer Groups @ Siksha 'O' Anusandhan
+            </h2>
+            <p class="gdg-banner-desc">
+              Organized by <strong style="color: #FFFFFF;">GDG ITER Chapter</strong> in collaboration with Google Cloud
+              &amp; tech industry leaders. Fostering hands-on developer growth, cloud computing, and real-world AI
+              engineering at Siksha 'O' Anusandhan, Bhubaneswar.
+            </p>
+            <div class="gdg-banner-meta-pills">
+              <span class="gdg-banner-pill">
+                <span style="color: #4285F4;">●</span> 1,500+ Community Members
+              </span>
+              <span class="gdg-banner-pill">
+                <span style="color: #EA4335;">●</span> 3-Day Technical Summit
+              </span>
+              <span class="gdg-banner-pill">
+                <span style="color: #FBBC04;">●</span> 24h AI Hack Sprint
+              </span>
+              <span class="gdg-banner-pill">
+                <span style="color: #34A853;">●</span> 100% Free Entry &amp; Cloud Credits
+              </span>
+            </div>
+          </div>
+
+          <!-- Banner Direct Actions -->
+          <div class="gdg-banner-actions">
+            <button class="btn btn-primary" data-open-modal="registration" style="padding: 0.8rem 1.25rem;">
+              <span>Register Free</span>
+              <span>⚡</span>
+            </button>
+            <a href="https://developers.google.com/community/gdg" target="_blank" rel="noreferrer"
+              class="btn btn-secondary btn-sm" style="padding: 0.75rem 1rem;">
+              <span>Explore GDG Global</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 01: ABOUT FEST & ARCHITECTURE
+         ========================================================================== -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head text-center" style="max-width: 800px; margin: 0 auto 3rem auto; text-align: center;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <span class="kicker-badge" style="color: var(--primary-mint); border-color: rgba(16, 185, 129, 0.3);">
+              <span class="ping-beacon" style="margin-right: 0.2rem;">
+                <span class="ping-wave"></span>
+                <span class="ping-core"></span>
+              </span>
+              DEVELOPER FEST OVERVIEW
+            </span>
+          </div>
+          <h2 class="section-title cyber-scramble" style="font-size: clamp(1.8rem, 3.5vw, 2.75rem);"
+            data-scramble="Why Join Tekno Krraft 2026?">Why Join Tekno Krraft 2026?</h2>
+          <p class="section-desc" style="max-width: 700px; margin: 0.75rem auto 0 auto;">
+            Organized by <strong style="color: #60A5FA;">GDG @ SOA, ITER Chapter</strong>, Tekno Krraft brings together
+            visionaries, students, industry mentors, and open-source leaders for three intensive days of tech discovery.
+          </p>
+        </div>
+
+        <!-- Official 4-Stat Cards Row (Z.stats) -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+          <div class="cyber-glass spotlight-card"
+            style="padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid rgba(66, 133, 244, 0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="bento-stat-num" style="color: #4285F4; font-size: 2.4rem;">1,500+</span>
+              <div
+                style="width: 40px; height: 40px; border-radius: var(--radius-lg); background: rgba(66, 133, 244, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                👥</div>
+            </div>
+            <p
+              style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              Attendees Expected</p>
+          </div>
+
+          <div class="cyber-glass spotlight-card"
+            style="padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid rgba(234, 67, 53, 0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="bento-stat-num" style="color: #EA4335; font-size: 2.4rem;">30+</span>
+              <div
+                style="width: 40px; height: 40px; border-radius: var(--radius-lg); background: rgba(234, 67, 53, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                ⚡</div>
+            </div>
+            <p
+              style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              Technical Sessions</p>
+          </div>
+
+          <div class="cyber-glass spotlight-card"
+            style="padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid rgba(251, 188, 4, 0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="bento-stat-num" style="color: #FBBC04; font-size: 2.4rem;">₹2,50,000+</span>
+              <div
+                style="width: 40px; height: 40px; border-radius: var(--radius-lg); background: rgba(251, 188, 4, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                🏆</div>
+            </div>
+            <p
+              style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              Prize Pool</p>
+          </div>
+
+          <div class="cyber-glass spotlight-card"
+            style="padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid rgba(52, 168, 83, 0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="bento-stat-num" style="color: #34A853; font-size: 2.4rem;">24 Hours</span>
+              <div
+                style="width: 40px; height: 40px; border-radius: var(--radius-lg); background: rgba(52, 168, 83, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                ⏱️</div>
+            </div>
+            <p
+              style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              Hack Sprint Hours</p>
+          </div>
+        </div>
+
+        <!-- 3 Feature Pillars Row (bf) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <!-- Card 1 -->
+          <div class="cyber-glass spotlight-card"
+            style="padding: 2rem; border-radius: var(--radius-xl); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div
+                style="width: 48px; height: 48px; border-radius: var(--radius-lg); background: rgba(66, 133, 244, 0.15); border: 1px solid rgba(66, 133, 244, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                💻
+              </div>
+              <h3
+                style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.65rem;">
+                Hands-On Technical Bootcamps
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Build real-world projects alongside Google Developer Experts (GDEs) and senior engineers across Gen AI,
+                Cloud Run, Flutter, and DevOps.
+              </p>
+            </div>
+            <div
+              style="margin-top: 1.25rem; padding-top: 0.85rem; border-top: 1px solid var(--border-glass); font-family: var(--font-mono); font-size: 0.75rem; color: #4285F4;">
+              Gemini 1.5 Pro • Next.js • Flutter 3 • Docker
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="cyber-glass flagship-hack spotlight-card"
+            style="padding: 2rem; border-radius: var(--radius-xl); display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(234, 67, 53, 0.4);">
+            <div>
+              <div
+                style="width: 48px; height: 48px; border-radius: var(--radius-lg); background: rgba(234, 67, 53, 0.15); border: 1px solid rgba(234, 67, 53, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                🚀
+              </div>
+              <h3
+                style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.65rem;">
+                24-Hour AI/ML Hack Sprint
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Collaborate in teams to prototype groundbreaking solutions addressing pressing challenges with Gemini
+                models, Firebase, and Cloud infrastructure.
+              </p>
+            </div>
+            <div
+              style="margin-top: 1.25rem; padding-top: 0.85rem; border-top: 1px solid var(--border-glass); font-family: var(--font-mono); font-size: 0.75rem; color: #EA4335;">
+              ₹2,50,000+ Prize Pool • VC &amp; GDE Evaluation
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cyber-glass spotlight-card"
+            style="padding: 2rem; border-radius: var(--radius-xl); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div
+                style="width: 48px; height: 48px; border-radius: var(--radius-lg); background: rgba(52, 168, 83, 0.15); border: 1px solid rgba(52, 168, 83, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+                🌟
+              </div>
+              <h3
+                style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.65rem;">
+                Recognitions &amp; Networking
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                Connect with leading technology hiring managers, gain verified GDG certificates, exclusive Google
+                Developer swags, and prize cash pools.
+              </p>
+            </div>
+            <div
+              style="margin-top: 1.25rem; padding-top: 0.85rem; border-top: 1px solid var(--border-glass); font-family: var(--font-mono); font-size: 0.75rem; color: #34A853;">
+              Verified Certificates • Swag Packs • Hiring Connect
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             Interactive Hackathon Prize Pool Breakdown (₹2,50,000+)
+             ========================================================================== -->
+        <div class="prize-section-block" id="prizes">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+            <span class="kicker-badge" style="color: #FBBF24; border-color: rgba(251, 191, 36, 0.4);">
+              <span>🏆</span> HACK SPRINT BOUNTY POOL
+            </span>
+            <h3 class="section-title cyber-scramble"
+              style="font-size: clamp(1.6rem, 2.8vw, 2.2rem); margin-top: 0.6rem;"
+              data-scramble="₹2,50,000+ Prize Pool">
+              ₹2,50,000+ Prize Pool
+            </h3>
+            <p class="section-desc" style="font-size: 0.88rem; margin-top: 0.4rem;">
+              Click any podium tier below to celebrate and reveal exclusive partner perks &amp; cloud credits!
+            </p>
+          </div>
+
+          <div class="prize-pool-grid">
+            <!-- 🥇 Grand Champion -->
+            <div class="prize-card gold spotlight-card" onclick="triggerConfetti(event)" title="Click to celebrate!">
+              <div class="prize-medal">🥇</div>
+              <div class="prize-rank">GRAND CHAMPION</div>
+              <div class="prize-amount">₹1,00,000</div>
+              <ul class="prize-perks">
+                <li>Direct Cash Award</li>
+                <li>$5,000 Google Cloud Credits</li>
+                <li>Grand Winner Golden Trophy</li>
+                <li>Exclusive GDG Leader Swag Kit</li>
+              </ul>
+            </div>
+
+            <!-- 🥈 1st Runner-Up -->
+            <div class="prize-card silver spotlight-card" onclick="triggerConfetti(event)" title="Click to celebrate!">
+              <div class="prize-medal">🥈</div>
+              <div class="prize-rank">1ST RUNNER-UP</div>
+              <div class="prize-amount">₹60,000</div>
+              <ul class="prize-perks">
+                <li>Direct Cash Award</li>
+                <li>JetBrains All-Products 1-Yr Pack</li>
+                <li>Silver Podium Trophy</li>
+                <li>Official GDG Runner-Up Swags</li>
+              </ul>
+            </div>
+
+            <!-- 🥉 2nd Runner-Up -->
+            <div class="prize-card bronze spotlight-card" onclick="triggerConfetti(event)" title="Click to celebrate!">
+              <div class="prize-medal">🥉</div>
+              <div class="prize-rank">2ND RUNNER-UP</div>
+              <div class="prize-amount">₹40,000</div>
+              <ul class="prize-perks">
+                <li>Direct Cash Award</li>
+                <li>Cloud Run Sandbox Vouchers</li>
+                <li>Bronze Podium Trophy</li>
+                <li>GDG Community Swags</li>
+              </ul>
+            </div>
+
+            <!-- 💡 Track Bounties -->
+            <div class="prize-card bounty spotlight-card" onclick="triggerConfetti(event)" title="Click to celebrate!">
+              <div class="prize-medal">💡</div>
+              <div class="prize-rank">SPECIAL TRACK BOUNTIES</div>
+              <div class="prize-amount">₹50,000</div>
+              <ul class="prize-perks">
+                <li>Best Gen AI &amp; Vertex Hack</li>
+                <li>Best Full-Stack Cloud App</li>
+                <li>Best Mobile / Flutter Project</li>
+                <li>Best Open Source Dev Tool</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02: SPEAKERS & MENTORS (DUOTONE EDITORIAL WITH REAL PHOTOS)
+         ========================================================================== -->
+    <section class="section-padding" id="speakers" style="background: rgba(14, 19, 34, 0.4);">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head"
+          style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="kicker-badge">// 02. GDES &amp; MENTORS</span>
+            <h2 class="section-title cyber-scramble" data-scramble="Learn Direct from Industry Leaders">Learn Direct
+              from Industry Leaders</h2>
+            <p class="section-desc">
+              Connect 1-on-1 with Google Developer Experts, principal architects, and open-source veterans.
+            </p>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--secondary-cyan);">
+            ● Live On Campus Keynotes &amp; Workshops →
+          </span>
+        </div>
+
+        <!-- Speakers Grid (Exact Client Dataset: gf) -->
+        <div class="speakers-grid">
+          <!-- Mentor 1: Dr. Ananya Patnaik -->
+          <article class="speaker-card cyber-glass spotlight-card">
+            <div>
+              <div class="speaker-header">
+                <div class="speaker-avatar-duotone"
+                  style="width: 60px; height: 60px; border-radius: var(--radius-lg); overflow: hidden;">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop&q=80"
+                    alt="Dr. Ananya Patnaik" class="speaker-avatar-img" />
+                </div>
+                <div>
+                  <span class="speaker-role-tag">PRINCIPAL CLOUD ARCHITECT</span>
+                  <h3 class="speaker-name">Dr. Ananya Patnaik</h3>
+                  <p class="speaker-handle">Google Developer Student Clubs</p>
+                </div>
+              </div>
+              <p
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: #4285F4; margin-bottom: 0.5rem; font-weight: 700;">
+                Keynote: Next Generation Developer Ecosystems
+              </p>
+              <p class="speaker-bio">
+                Ex-Google Senior Staff Engineer specializing in enterprise Kubernetes architectures and Generative AI
+                integration.
+              </p>
+            </div>
+            <div class="speaker-footer">
+              <span style="color: var(--secondary-cyan);">#GenerativeAI #Kubernetes</span>
+              <div style="display: flex; gap: 0.6rem;">
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">GitHub ↗</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">LinkedIn ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mentor 2: Rohan Samal -->
+          <article class="speaker-card cyber-glass-glow spotlight-card">
+            <div>
+              <div class="speaker-header">
+                <div class="speaker-avatar-duotone"
+                  style="width: 60px; height: 60px; border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--primary-mint);">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
+                    alt="Rohan Samal" class="speaker-avatar-img" />
+                </div>
+                <div>
+                  <span class="speaker-role-tag"
+                    style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: var(--primary-mint);">SENIOR
+                    AI ENGINEER</span>
+                  <h3 class="speaker-name">Rohan Samal</h3>
+                  <p class="speaker-handle">Google Cloud Ecosystem</p>
+                </div>
+              </div>
+              <p
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--primary-mint); margin-bottom: 0.5rem; font-weight: 700;">
+                Workshop: Building Multimodal AI Agents with Gemini
+              </p>
+              <p class="speaker-bio">
+                Pioneer in RAG systems and LLM agent orchestration. Author of 'Building Production-Grade AI Agents'.
+              </p>
+            </div>
+            <div class="speaker-footer">
+              <span style="color: var(--primary-mint);">#Gemini1.5Pro #RAG</span>
+              <div style="display: flex; gap: 0.6rem;">
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">GitHub ↗</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">LinkedIn ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mentor 3: Priyanka Mishra -->
+          <article class="speaker-card cyber-glass spotlight-card">
+            <div>
+              <div class="speaker-header">
+                <div class="speaker-avatar-duotone"
+                  style="width: 60px; height: 60px; border-radius: var(--radius-lg); overflow: hidden;">
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&auto=format&fit=crop&q=80"
+                    alt="Priyanka Mishra" class="speaker-avatar-img" />
+                </div>
+                <div>
+                  <span class="speaker-role-tag"
+                    style="background: rgba(129, 140, 248, 0.2); border-color: rgba(129, 140, 248, 0.4); color: var(--accent-violet);">GDE
+                    FLUTTER &amp; MOBILE</span>
+                  <h3 class="speaker-name">Priyanka Mishra</h3>
+                  <p class="speaker-handle">Flutter &amp; Mobile Lead</p>
+                </div>
+              </div>
+              <p
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: #FBBC04; margin-bottom: 0.5rem; font-weight: 700;">
+                Masterclass: Cross-Platform Masterclass with Flutter 3
+              </p>
+              <p class="speaker-bio">
+                Global speaker and tech advocate building responsive mobile solutions with Flutter and Firebase.
+              </p>
+            </div>
+            <div class="speaker-footer">
+              <span style="color: var(--accent-violet);">#Flutter #Firebase</span>
+              <div style="display: flex; gap: 0.6rem;">
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">GitHub ↗</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">LinkedIn ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mentor 4: Amitabh Swain -->
+          <article class="speaker-card cyber-glass spotlight-card">
+            <div>
+              <div class="speaker-header">
+                <div class="speaker-avatar-duotone"
+                  style="width: 60px; height: 60px; border-radius: var(--radius-lg); overflow: hidden;">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
+                    alt="Amitabh Swain" class="speaker-avatar-img" />
+                </div>
+                <div>
+                  <span class="speaker-role-tag"
+                    style="background: rgba(251, 191, 36, 0.2); border-color: rgba(251, 191, 36, 0.4); color: var(--accent-amber);">STAFF
+                    ENGINEER</span>
+                  <h3 class="speaker-name">Amitabh Swain</h3>
+                  <p class="speaker-handle">Atlassian</p>
+                </div>
+              </div>
+              <p
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: #34A853; margin-bottom: 0.5rem; font-weight: 700;">
+                Talk: System Design at Scale: Handling Billions of Requests
+              </p>
+              <p class="speaker-bio">
+                Distributed systems expert with over 12 years experience building fault-tolerant infrastructure.
+              </p>
+            </div>
+            <div class="speaker-footer">
+              <span style="color: var(--accent-amber);">#DistributedSystems #DevOps</span>
+              <div style="display: flex; gap: 0.6rem;">
+                <a href="https://github.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">GitHub ↗</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                  style="color: #CBD5E1; text-decoration: none;">LinkedIn ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03: INTERACTIVE SCHEDULE & TIMELINE RAIL (3-DAY SCHEDULE)
+         ========================================================================== -->
+    <section class="section-padding" id="schedule">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span class="kicker-badge cyan">// 03. 3-DAY INTERACTIVE SCHEDULE</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--primary-mint);">UTC+05:30
+              (IST)</span>
+          </div>
+          <h2 class="section-title cyber-scramble" data-scramble="Plan Your Fest Journey">Plan Your Fest Journey</h2>
+          <p class="section-desc">
+            Explore keynotes, hands-on workshops, competitive coding, and the 24-hour hack sprint. Switch days, filter
+            by session type, export .ics invites, and reserve your seat.
+          </p>
+        </div>
+
+        <!-- Controls: Day Switchers & Filter Controls -->
+        <div class="schedule-controls">
+          <!-- Day Tabs (Exact Client Subtitles) -->
+          <div class="day-tabs-group" id="daySelectorGroup">
+            <button class="day-tab-btn active" data-day="1">
+              DAY 1
+              <span>Kickoff &amp; Cloud/Web3</span>
+            </button>
+            <button class="day-tab-btn" data-day="2">
+              DAY 2
+              <span>AI Hack &amp; System Design</span>
+            </button>
+            <button class="day-tab-btn" data-day="3">
+              DAY 3
+              <span>Code Finals &amp; Awards</span>
+            </button>
+          </div>
+
+          <!-- Schedule Search Bar -->
+          <input type="text" id="scheduleSearchInput" class="schedule-search-input"
+            placeholder="🔍 Search sessions or mentors..." />
+        </div>
+
+        <!-- Category Filter Pills (Exact Client Categories) -->
+        <div class="filter-pills-row" style="margin-bottom: 2rem;">
+          <button class="filter-pill active" data-filter="All">* All</button>
+          <button class="filter-pill" data-filter="Keynote">Keynote</button>
+          <button class="filter-pill" data-filter="Workshop">Workshop</button>
+          <button class="filter-pill" data-filter="Hackathon">Hackathon</button>
+          <button class="filter-pill" data-filter="Competition">Competition</button>
+          <button class="filter-pill" data-filter="Talk">Talk</button>
+          <button class="filter-pill" data-filter="Gaming/Fun">Gaming/Fun</button>
+        </div>
+
+        <!-- Illuminated Vertical Timeline Rail Container (Populated by app.js) -->
+        <div class="timeline-rail" id="timelineContainer">
+          <!-- Dynamically populated by app.js with the 11 client sessions -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04: TRACK DEEP DIVE & SIMULATOR (4 CLIENT TRACKS)
+         ========================================================================== -->
+    <section class="section-padding" id="tracks" style="background: rgba(14, 19, 34, 0.4);">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head">
+          <span class="kicker-badge">// 04. TRACKS &amp; WORKSHOPS</span>
+          <h2 class="section-title cyber-scramble" data-scramble="Detailed Track Explorer & Code Lab">Detailed Track
+            Explorer &amp; Code Lab</h2>
+          <p class="section-desc">
+            Get under the hood with technical prerequisites, mentor assignments, and live code samples before arriving
+            on campus.
+          </p>
+        </div>
+
+        <!-- Track Selector Tab Buttons (Exact Client mf Track IDs) -->
+        <div class="track-tabs-row">
+          <button class="track-tab-btn active" data-track="gen-ai">✨ Generative AI &amp; Machine Learning</button>
+          <button class="track-tab-btn" data-track="web-cloud">🌐 Full-Stack Web &amp; Cloud Architecture</button>
+          <button class="track-tab-btn" data-track="mobile-dev">📱 Mobile &amp; Cross-Platform Development</button>
+          <button class="track-tab-btn" data-track="devops-opensource">🌿 Open Source &amp; DevOps Engineering</button>
+        </div>
+
+        <!-- Dynamic Track Detail Grid -->
+        <div class="track-detail-grid">
+          <!-- Left: Track Description Card -->
+          <div class="cyber-glass spotlight-card"
+            style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span class="kicker-badge" id="trackLevelDisplay">▲ INTERMEDIATE // 8 SESSIONS</span>
+                <span style="font-size: 1.5rem;">✨</span>
+              </div>
+              <h3 id="trackTitleDisplay"
+                style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.75rem;">
+                Generative AI &amp; Machine Learning
+              </h3>
+              <p id="trackDescDisplay"
+                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Dive deep into the world of Artificial Intelligence. Learn hands-on how to leverage Gemini 1.5 Pro,
+                build Retrieval-Augmented Generation (RAG) pipelines, multimodal AI agents, and deploy models on Google
+                Cloud Vertex AI.
+              </p>
+
+              <!-- Track Metadata Box -->
+              <div
+                style="background: rgba(10, 14, 24, 0.85); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Assigned Mentor:</span>
+                  <span style="color: var(--secondary-cyan); font-weight: 600;" id="trackMentorDisplay">Rohan Samal
+                    (Senior AI Engineer, Google Cloud Ecosystem)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Campus Lab:</span>
+                  <span style="color: #CBD5E1;" id="trackRoomDisplay">Bansuri Guru Computer Lab 3</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: var(--text-muted);">Prerequisites:</span>
+                  <span style="color: var(--primary-mint); font-weight: 600;" id="trackPrereqDisplay">Basic Python
+                    knowledge, Understanding of REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;" data-open-modal="registration">
+              <span>Register for this Track</span>
+              <span style="font-family: var(--font-mono);">→</span>
+            </button>
+          </div>
+
+          <!-- Right: Interactive Code Terminal Simulator -->
+          <div class="track-code-terminal">
+            <div class="terminal-titlebar">
+              <div class="terminal-window-dots">
+                <span class="term-dot red"></span>
+                <span class="term-dot yellow"></span>
+                <span class="term-dot green"></span>
+              </div>
+              <span>tekno-workspace // code-preview</span>
+              <span style="color: var(--primary-mint);">RUNNING</span>
+            </div>
+            <div class="terminal-code-body">
+              <pre><code id="trackCodeDisplay"># Multimodal Gemini 1.5 Pro Python Pipeline
+import google.generativeai as genai
+
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-pro-latest",
+    tools=[search_database, execute_code]
+)
+
+chat = model.start_chat(enable_automatic_function_calling=True)
+response = chat.send_message("Analyze system logs and suggest scaling action")
+print(response.text)</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive "Which Track Fits You?" Quiz Mini-Widget Banner -->
+        <div class="track-quiz-banner spotlight-card">
+          <div style="display: flex; align-items: center; gap: 1.25rem;">
+            <div
+              style="width: 48px; height: 48px; border-radius: var(--radius-lg); background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+              🎯
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: #FFFFFF;">
+                Not sure which track to choose?
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                Take our quick 15-second quiz to find your ideal workshops &amp; hackathon focus.
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-mono" id="openQuizBtn" style="white-space: nowrap;">
+            <span>🎯 Launch Track Quiz</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OFFICIAL ORGANIZER SPOTLIGHT (GDG ITER CHAPTER)
+         ========================================================================== -->
+    <section class="section-padding" style="position: relative; z-index: 10;">
+      <div class="container">
+        <div class="gdg-organizer-card">
+          <div style="display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: center;">
+            <!-- Elevated Brand Emblem Box -->
+            <div
+              style="background: rgba(255, 255, 255, 0.98); padding: 1.5rem; border-radius: var(--radius-xl); box-shadow: 0 10px 30px rgba(0,0,0,0.4); text-align: center; max-width: 240px; border: 1px solid rgba(255, 255, 255, 0.2);">
+              <img src="assets/gdg-logo-stacked.png"
+                alt="Google Developer Group Institute of Technical Education &amp; Research" class="gdg-logo-img"
+                style="max-height: 140px; margin: 0 auto;" />
+            </div>
+
+            <!-- Chapter Information -->
+            <div>
+              <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                <span class="kicker-badge" style="font-size: 0.65rem;">OFFICIAL CHAPTER HOST</span>
+                <span class="kicker-badge cyan" style="font-size: 0.65rem;">✓ GOOGLE DEVELOPERS ECOSYSTEM</span>
+                <span class="kicker-badge"
+                  style="font-size: 0.65rem; color: var(--accent-amber); border-color: rgba(251, 191, 36, 0.3);">EST.
+                  SOA ITER</span>
+              </div>
+              <h2
+                style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 800; color: #FFFFFF; line-height: 1.25;">
+                Google Developer Group <br />
+                <span style="color: #60A5FA;">Institute of Technical Education &amp; Research</span>
+              </h2>
+              <p
+                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 0.75rem; max-width: 720px;">
+                GDG ITER is an active developer community at Siksha 'O' Anusandhan (SOA Deemed to be University) in
+                Bhubaneswar, Odisha. We empower student builders, researchers, and professional developers through
+                high-octane hackathons, hands-on Google Cloud workshops, and open-source contributions.
+              </p>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1.25rem;">
+                <div class="meta-pill">
+                  <span style="color: var(--accent-rose);">📍</span>
+                  <span>ITER Campus 1, Khandagiri Square, Bhubaneswar, Odisha 751030</span>
+                </div>
+                <div class="meta-pill">
+                  <span style="color: var(--primary-mint);">👥</span>
+                  <span>3,200+ Chapter Members</span>
+                </div>
+                <a href="https://gdg.community.dev" target="_blank" rel="noopener"
+                  class="btn btn-secondary btn-sm btn-mono">
+                  Official Community Portal ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05: ECOSYSTEM PARTNERS & SPONSORS (_f)
+         ========================================================================== -->
+    <section class="section-padding" id="sponsors">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head">
+          <span class="kicker-badge cyan">// 05. SPONSORS &amp; PARTNERS</span>
+          <h2 class="section-title cyber-scramble" data-scramble="Powered by Industry Pioneers">Powered by Industry
+            Pioneers</h2>
+          <p class="section-desc">
+            Immense gratitude to our sponsors supporting student developer innovation, cloud credits, hackathon grants,
+            and community growth.
+          </p>
+        </div>
+
+        <!-- Title Sponsor (Google Cloud) -->
+        <div class="cyber-glass-glow spotlight-card" style="padding: 2rem; margin-bottom: 2rem; border-color: #4285F4;">
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="kicker-badge"
+              style="background: rgba(66, 133, 244, 0.2); color: #4285F4; border-color: rgba(66, 133, 244, 0.4); font-size: 0.65rem;">
+              ★ TITLE SPONSOR
+            </span>
+            <a href="https://cloud.google.com" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.75rem; color: #4285F4; text-decoration: none;">
+              cloud.google.com ↗
+            </a>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem;">
+            <div
+              style="width: 56px; height: 56px; border-radius: var(--radius-lg); background: rgba(66, 133, 244, 0.15); border: 1px solid rgba(66, 133, 244, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 0 20px rgba(66, 133, 244, 0.3);">
+              ☁️
+            </div>
+            <div>
+              <h3
+                style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 0.5rem;">
+                Google Cloud <span style="color: var(--primary-mint); font-size: 1.1rem;">✓</span>
+              </h3>
+              <p style="font-family: var(--font-mono); font-size: 0.78rem; color: #60A5FA;">Title Sponsor • Cloud
+                Credits &amp; AI Infrastructure</p>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 800px; line-height: 1.6;">
+            Title sponsor supporting developer education, cloud credits, and AI infrastructure. Official Vertex AI
+            sandbox access provided to all registered participants.
+          </p>
+        </div>
+
+        <!-- Platinum, Gold & Community Partners Grid (Exact Client _f) -->
+        <div class="sponsor-tier-title">
+          <span>◆ PLATINUM, GOLD &amp; COMMUNITY PARTNERS</span>
+        </div>
+        <div class="sponsors-grid-row">
+          <!-- Sponsor: GitHub (Platinum) -->
+          <div class="sponsor-card cyber-glass spotlight-card">
+            <div class="sponsor-brand-row">
+              <div class="sponsor-icon-box">🐙</div>
+              <div>
+                <span class="kicker-badge cyan" style="font-size: 0.6rem; padding: 0.1rem 0.4rem;">PLATINUM</span>
+                <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">
+                  GitHub</h4>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              Official developer platform sponsor powering student repositories and open-source bounties.
+            </p>
+            <a href="https://github.com" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--secondary-cyan); text-decoration: none;">github.com
+              ↗</a>
+          </div>
+
+          <!-- Sponsor: Firebase (Platinum) -->
+          <div class="sponsor-card cyber-glass spotlight-card">
+            <div class="sponsor-brand-row">
+              <div class="sponsor-icon-box" style="color: #FBBC04;">🔥</div>
+              <div>
+                <span class="kicker-badge"
+                  style="font-size: 0.6rem; padding: 0.1rem 0.4rem; color: #FBBC04; border-color: rgba(251, 188, 4, 0.3);">PLATINUM</span>
+                <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">
+                  Firebase</h4>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              Backend platform sponsor powering application state and real-time features.
+            </p>
+            <a href="https://firebase.google.com" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: #FBBC04; text-decoration: none;">firebase.google.com
+              ↗</a>
+          </div>
+
+          <!-- Sponsor: Postman (Gold) -->
+          <div class="sponsor-card cyber-glass spotlight-card">
+            <div class="sponsor-brand-row">
+              <div class="sponsor-icon-box" style="color: #EA4335;">🚀</div>
+              <div>
+                <span class="kicker-badge"
+                  style="font-size: 0.6rem; padding: 0.1rem 0.4rem; color: #FBBC04; border-color: rgba(251, 188, 4, 0.3);">GOLD</span>
+                <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">
+                  Postman</h4>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              API testing and development platform providing exclusive developer toolkits.
+            </p>
+            <a href="https://postman.com" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: #EA4335; text-decoration: none;">postman.com
+              ↗</a>
+          </div>
+
+          <!-- Sponsor: JetBrains (Gold) -->
+          <div class="sponsor-card cyber-glass spotlight-card">
+            <div class="sponsor-brand-row">
+              <div class="sponsor-icon-box" style="color: #4285F4;">💻</div>
+              <div>
+                <span class="kicker-badge"
+                  style="font-size: 0.6rem; padding: 0.1rem 0.4rem; color: #FBBC04; border-color: rgba(251, 188, 4, 0.3);">GOLD</span>
+                <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">
+                  JetBrains</h4>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              Providing 1-year IDE licenses for hackathon winners.
+            </p>
+            <a href="https://jetbrains.com" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: #4285F4; text-decoration: none;">jetbrains.com
+              ↗</a>
+          </div>
+
+          <!-- Sponsor: SOA University (Community Partner) -->
+          <div class="sponsor-card cyber-glass spotlight-card">
+            <div class="sponsor-brand-row">
+              <div class="sponsor-icon-box" style="color: var(--primary-mint);">🏛️</div>
+              <div>
+                <span class="kicker-badge"
+                  style="font-size: 0.6rem; padding: 0.1rem 0.4rem; color: var(--primary-mint); border-color: rgba(16, 185, 129, 0.3);">COMMUNITY
+                  PARTNER</span>
+                <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">SOA
+                  University</h4>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              Host institution and venue partner at Siksha 'O' Anusandhan, ITER Campus.
+            </p>
+            <a href="https://soa.ac.in" target="_blank" rel="noopener"
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--primary-mint); text-decoration: none;">soa.ac.in
+              ↗</a>
+          </div>
+        </div>
+
+        <!-- Call to Sponsor Banner -->
+        <div class="cyber-glass spotlight-card"
+          style="padding: 1.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-radius: var(--radius-xl);">
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #FFFFFF;">Want to
+              Partner with Tekno Krraft 2026?</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Reach 1,500+ elite
+              software engineers, researchers &amp; student creators.</p>
+          </div>
+          <a href="mailto:gdg@iter.ac.in" class="btn btn-secondary btn-mono">
+            <span>Contact Sponsorship Team</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06: FREQUENTLY ASKED QUESTIONS (ACCORDION - vf)
+         ========================================================================== -->
+    <section class="section-padding" id="faq" style="background: rgba(14, 19, 34, 0.4);">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-head">
+          <span class="kicker-badge">// 06. HELP &amp; FAQ</span>
+          <h2 class="section-title cyber-scramble" data-scramble="Frequently Asked Questions">Frequently Asked Questions
+          </h2>
+          <p class="section-desc">
+            Everything you need to know about registration fees, hack sprint eligibility, logistics, and certificates.
+          </p>
+        </div>
+
+        <!-- FAQ Search Box -->
+        <div class="faq-search-box">
+          <input type="text" id="faqSearchInput" class="form-input"
+            placeholder="🔍 Search questions (e.g. fee, eligibility, team size, certificates)..." />
+        </div>
+
+        <!-- FAQ List (Exact Client vf Dataset) -->
+        <div class="faq-list">
+          <!-- Item 1 (Registration) -->
+          <div class="faq-item open">
+            <button class="faq-question-btn">
+              <span>01. Is there any registration fee for Tekno Krraft 2026?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              No! Registration for Tekno Krraft 2026 is completely free for all verified students, research scholars,
+              and developers courtesy of GDG ITER Chapter and our event sponsors.
+            </div>
+          </div>
+
+          <!-- Item 2 (Registration) -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>02. Who is eligible to participate in the workshops and hackathon?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              Students from any university or college (undergraduate, postgraduate, or diploma) as well as working tech
+              professionals and open-source contributors are welcome to join.
+            </div>
+          </div>
+
+          <!-- Item 3 (Hackathon) -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>03. What is the maximum allowed team size for the Hack Sprint?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              Teams can consist of 2 to 4 members. Solo participation is also permitted, and we provide a dedicated Team
+              Matchmaking session on Day 1 before hackathon kickoff.
+            </div>
+          </div>
+
+          <!-- Item 4 (Logistics) -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>04. Will participation certificates be issued?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              Yes! Digital certificates verified by GDG SOA ITER Chapter will be provided to all attendees who attend at
+              least 3 technical sessions or submit a hackathon project.
+            </div>
+          </div>
+
+          <!-- Item 5 (Logistics) -->
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>05. What should I bring to the technical workshops?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              Bring your laptop, charger, student ID card, and enthusiasm! Prerequisite software guides will be emailed
+              to registered participants 48 hours prior to Day 1.
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Ping Contact Card -->
+        <div class="cyber-glass"
+          style="margin-top: 2rem; padding: 1.5rem; text-align: center; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); border-radius: var(--radius-xl);">
+          Got more questions? Run <code
+            style="color: var(--primary-mint); font-weight: 700;">$ ping gdg@iter.ac.in</code> or email us directly at
+          <a href="mailto:gdg@iter.ac.in"
+            style="color: var(--secondary-cyan); text-decoration: underline;">gdg@iter.ac.in</a>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER & CONTACT (Exact Client 4-Column Layout & Legal Info)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1.2fr 1.5fr; gap: 2.5rem;">
+        <!-- Col 1: Brand & Organization -->
+        <div class="footer-col">
+          <a href="#hero" style="text-decoration: none; display: inline-block; margin-bottom: 0.85rem;"
+            aria-label="Tekno Krraft 2026 - Back to Top">
+            <img src="assets/tekno-krraft-primary.png" alt="Tekno Krraft 2026 - GDG @ SOA, ITER Chapter"
+              class="footer-primary-logo" />
+          </a>
+          <p
+            style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; max-width: 360px;">
+            The premier 3-day technical fest empowering students, developers, and tech enthusiasts with cutting-edge
+            Cloud, Gen AI, Mobile, and Open Source learning.
+          </p>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm"
+              aria-label="GitHub" style="padding: 0.4rem 0.75rem;">
+              <span>GitHub</span> ↗
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm"
+              aria-label="LinkedIn" style="padding: 0.4rem 0.75rem;">
+              <span>LinkedIn</span> ↗
+            </a>
+            <a href="https://discord.gg" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm"
+              aria-label="Discord" style="padding: 0.4rem 0.75rem;">
+              <span>Discord</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Navigation -->
+        <div class="footer-col">
+          <h4
+            style="font-family: var(--font-display); font-size: 0.85rem; color: #FFFFFF; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">
+            Quick Navigation
+          </h4>
+          <ul class="footer-links"
+            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem;">
+            <li><a href="#about" class="footer-text-link">About Fest</a></li>
+            <li><a href="#schedule" class="footer-text-link">Event Schedule</a></li>
+            <li><a href="#tracks" class="footer-text-link">Tracks &amp; Workshops</a></li>
+            <li><a href="#speakers" class="footer-text-link">Speakers &amp; Mentors</a></li>
+            <li><a href="#sponsors" class="footer-text-link">Sponsors &amp; Partners</a></li>
+            <li><a href="#faq" class="footer-text-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Community & Guidelines -->
+        <div class="footer-col">
+          <h4
+            style="font-family: var(--font-display); font-size: 0.85rem; color: #FFFFFF; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">
+            Community &amp; Guidelines
+          </h4>
+          <ul class="footer-links"
+            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem;">
+            <li>
+              <button data-open-modal="conduct" class="footer-text-link" style="color: #34A853; font-weight: 600;">
+                <span>🛡️ Code of Conduct</span>
+              </button>
+            </li>
+            <li>
+              <a href="https://developers.google.com/community/gdg" target="_blank" rel="noreferrer"
+                class="footer-text-link">
+                <span>GDG Guidelines</span> ↗
+              </a>
+            </li>
+            <li><a href="#conductModal" data-open-modal="conduct" class="footer-text-link">Terms &amp; Privacy</a></li>
+            <li><a href="#about" class="footer-text-link">Hackathon Rules</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Venue & Contact -->
+        <div class="footer-col">
+          <h4
+            style="font-family: var(--font-display); font-size: 0.85rem; color: #FFFFFF; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">
+            Venue &amp; Contact
+          </h4>
+          <div class="footer-contact-box">
+            <p>
+              <strong style="color: #FFFFFF; display: block; margin-bottom: 0.2rem;">Siksha 'O' Anusandhan</strong>
+              ITER Campus, Khandagiri Square, Bhubaneswar, Odisha 751030
+            </p>
+            <div>
+              <a href="mailto:gdg@iter.ac.in" class="footer-email-link">
+                <span>✉️</span>
+                <span>gdg@iter.ac.in</span>
+              </a>
+            </div>
+            <div
+              style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--primary-mint); margin-top: 0.4rem;">
+              ● Registration: 100% Free
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar with Legal Disclaimer -->
+      <div class="footer-bottom-bar"
+        style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass); display: flex; flex-direction: column; md-flex-row: row; justify-content: space-between; gap: 1rem; font-size: 0.72rem; color: var(--text-muted);">
+        <div style="display: flex; align-items: center; gap: 0.35rem;">
+          <span>© 2026 Tekno Krraft - GDG ITER Chapter. Built for builders with</span>
+          <span style="color: #EA4335;">❤️</span>
+        </div>
+        <p style="max-width: 650px; line-height: 1.4; color: #64748B;">
+          Google Developer Group is an independent group; activities and opinions expressed here are in no way linked to
+          Google, the corporation.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       REGISTRATION / CLAIM PASS MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-backdrop" id="registrationModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close registration dialog">✕</button>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+          <img src="assets/tekno-krraft-primary.png" alt="Tekno Krraft 2026 Logo"
+            style="height: 32px; width: auto; object-fit: contain;" />
+          <span class="kicker-badge" style="font-size: 0.65rem;">[OFFICIAL_REGISTRATION]</span>
+        </div>
+        <h2 id="modalHeading"
+          style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 800; color: #FFFFFF; margin-top: 0.25rem;">
+          Register for Tekno Krraft 2026
+        </h2>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">
+          Free admission with verified attendee pass &amp; Google Cloud workshop sandbox credits.
+        </p>
+      </div>
+
+      <form id="registrationForm">
+        <div class="form-group">
+          <label class="form-label" for="regName">FULL NAME / BUILDER HANDLE *</label>
+          <input type="text" id="regName" class="form-input" placeholder="e.g. Alex Chen" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regEmail">COLLEGE OR WORK EMAIL *</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="alex@iter.ac.in" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regTrack">PRIMARY WORKSHOP TRACK *</label>
+          <select id="regTrack" class="form-select">
+            <option value="Generative AI &amp; Machine Learning">Generative AI &amp; Machine Learning</option>
+            <option value="Full-Stack Web &amp; Cloud Architecture">Full-Stack Web &amp; Cloud Architecture</option>
+            <option value="Mobile &amp; Cross-Platform Development">Mobile &amp; Cross-Platform Development</option>
+            <option value="Open Source &amp; DevOps Engineering">Open Source &amp; DevOps Engineering</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regCollege">INSTITUTION / UNIVERSITY</label>
+          <input type="text" id="regCollege" class="form-input"
+            placeholder="e.g. Siksha 'O' Anusandhan (ITER Campus)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.85rem;">
+          <span>Generate Pass &amp; Complete Registration</span>
+          <span>⚡</span>
+        </button>
+
+        <p
+          style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-muted); text-align: center; margin-top: 0.85rem;">
+          Registration is 100% Free • Data is protected under GDG Community Code of Conduct.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GDG COMMUNITY CODE OF CONDUCT MODAL DIALOG (Exact Client Conduct Text)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="conductModal" role="dialog" aria-modal="true" aria-labelledby="conductHeading">
+    <div class="modal-dialog" style="max-width: 620px;">
+      <button class="modal-close-btn" data-close-modal="conduct" aria-label="Close Code of Conduct dialog">✕</button>
+
+      <div
+        style="display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+        <div
+          style="width: 36px; height: 36px; border-radius: var(--radius-md); background: rgba(52, 168, 83, 0.15); border: 1px solid rgba(52, 168, 83, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #34A853;">
+          🛡️
+        </div>
+        <h2 id="conductHeading"
+          style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #FFFFFF;">
+          GDG Community Code of Conduct
+        </h2>
+      </div>
+
+      <div class="modal-conduct-content">
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+          <strong style="color: #FFFFFF;">Tekno Krraft 2026</strong>, organized by GDG ITER Chapter, is dedicated to
+          providing a harassment-free event experience for everyone, regardless of gender, sexual orientation,
+          disability, physical appearance, body size, race, or religion.
+        </p>
+
+        <h4
+          style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.6rem;">
+          Our Standards:
+        </h4>
+
+        <ul class="conduct-rule-list">
+          <li class="conduct-rule-item">
+            <span class="dot">●</span>
+            <span>Be welcoming, respectful, and inclusive to all attendees, speakers, and volunteers.</span>
+          </li>
+          <li class="conduct-rule-item">
+            <span class="dot">●</span>
+            <span>Focus on collaborative learning, constructive feedback, and ethical coding practices.</span>
+          </li>
+          <li class="conduct-rule-item">
+            <span class="dot">●</span>
+            <span>Harassment, offensive verbal comments, deliberate intimidation, or disruptive talk will not be
+              tolerated.</span>
+          </li>
+          <li class="conduct-rule-item">
+            <span class="dot">●</span>
+            <span>If you notice any violations or feel unsafe, please reach out to any GDG volunteer with an official
+              badge immediately or email <a href="mailto:gdg@iter.ac.in"
+                style="color: #4285F4; text-decoration: underline;">gdg@iter.ac.in</a>.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        style="margin-top: 1.5rem; pt: 1rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: flex-end;">
+        <button class="btn btn-primary btn-sm" data-close-modal="conduct">
+          <span>I Understand &amp; Accept</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE / HACKER TERMINAL MODAL (Ctrl + K)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="commandPaletteModal" role="dialog" aria-modal="true" aria-labelledby="cmdPrompt">
+    <div class="command-palette-dialog">
+      <div class="command-header">
+        <span class="command-prompt-symbol">&gt;</span>
+        <input type="text" id="commandInput" class="command-input"
+          placeholder="Type a command (e.g. 'schedule', 'matrix', 'theme', 'prize', 'register')..."
+          autocomplete="off" />
+        <kbd class="cmd-k-trigger-kbd">ESC</kbd>
+      </div>
+      <ul class="command-list" id="commandList">
+        <li class="command-item" data-cmd="schedule">
+          <div class="command-item-left">
+            <span>📅</span>
+            <span>Jump to Schedule &amp; Timelines</span>
+          </div>
+          <span class="command-badge">goto schedule</span>
+        </li>
+        <li class="command-item" data-cmd="speakers">
+          <div class="command-item-left">
+            <span>🎤</span>
+            <span>View Keynote &amp; Session Speakers</span>
+          </div>
+          <span class="command-badge">goto speakers</span>
+        </li>
+        <li class="command-item" data-cmd="tracks">
+          <div class="command-item-left">
+            <span>⚡</span>
+            <span>Explore 4 Technical Tracks</span>
+          </div>
+          <span class="command-badge">goto tracks</span>
+        </li>
+        <li class="command-item" data-cmd="prizes">
+          <div class="command-item-left">
+            <span>🏆</span>
+            <span>View ₹2,50,000+ Hackathon Prize Pool</span>
+          </div>
+          <span class="command-badge">goto prizes</span>
+        </li>
+        <li class="command-item" data-cmd="quiz">
+          <div class="command-item-left">
+            <span>🎯</span>
+            <span>Launch 15-Sec Track Recommendation Quiz</span>
+          </div>
+          <span class="command-badge">quiz</span>
+        </li>
+        <li class="command-item" data-cmd="register">
+          <div class="command-item-left">
+            <span>🎫</span>
+            <span>Claim &amp; Generate Attendee Pass</span>
+          </div>
+          <span class="command-badge">register</span>
+        </li>
+        <li class="command-item" data-cmd="matrix">
+          <div class="command-item-left">
+            <span>🟢</span>
+            <span>Launch Fullscreen Digital Matrix Rain</span>
+          </div>
+          <span class="command-badge">matrix</span>
+        </li>
+        <li class="command-item" data-cmd="theme-matrix">
+          <div class="command-item-left">
+            <span>💚</span>
+            <span>Switch Theme: Matrix Terminal</span>
+          </div>
+          <span class="command-badge">theme matrix</span>
+        </li>
+        <li class="command-item" data-cmd="theme-synthwave">
+          <div class="command-item-left">
+            <span>💜</span>
+            <span>Switch Theme: Neon Synthwave</span>
+          </div>
+          <span class="command-badge">theme synthwave</span>
+        </li>
+        <li class="command-item" data-cmd="theme-default">
+          <div class="command-item-left">
+            <span>💙</span>
+            <span>Switch Theme: Obsidian Cyber (Default)</span>
+          </div>
+          <span class="command-badge">theme default</span>
+        </li>
+        <li class="command-item" data-cmd="sfx">
+          <div class="command-item-left">
+            <span>🔊</span>
+            <span>Toggle Cyber Sound Synthesizer</span>
+          </div>
+          <span class="command-badge">sound</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WHICH TRACK FITS YOU? QUIZ MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="quizHeading">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <button class="modal-close-btn" id="closeQuizBtn" aria-label="Close Quiz">✕</button>
+
+      <div id="quizQuestionStage">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+          <span class="kicker-badge cyan" style="font-size: 0.65rem;">[15-SEC TRACK SELECTOR]</span>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);"
+            id="quizProgress">Question 1 of 3</span>
+        </div>
+        <h3 id="quizQuestionTitle"
+          style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #FFFFFF; margin-bottom: 1.25rem;">
+          What excites you most right now in tech?
+        </h3>
+        <div id="quizOptionsContainer">
+          <!-- Dynamic options injected by JS -->
+        </div>
+      </div>
+
+      <div id="quizResultStage" style="display: none;">
+        <div class="quiz-result-card">
+          <div style="font-size: 2.8rem; margin-bottom: 0.5rem;" id="quizResultEmoji">🧠</div>
+          <span class="kicker-badge" style="margin-bottom: 0.5rem;" id="quizResultBadge">RECOMMENDED TRACK</span>
+          <h3
+            style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #FFFFFF; margin: 0.5rem 0;"
+            id="quizResultTrackName">
+            Generative AI &amp; Machine Learning
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;"
+            id="quizResultDesc">
+            You're naturally driven to build autonomous agents, train models, and utilize LLMs. Vertex AI and Gemini
+            workshops will accelerate your skills.
+          </p>
+          <button class="btn btn-primary" id="claimQuizPassBtn" style="width: 100%; padding: 0.85rem;">
+            <span>Auto-Select Track &amp; Claim Pass ⚡</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container Root -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Interactive Logic Engine -->
+  <script src="app.js"></script>
+</body>
+
+</html>
